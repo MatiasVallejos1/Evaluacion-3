@@ -1,0 +1,6 @@
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\bin\Debug\StarCapModel.dll
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\bin\Debug\StarCapModel.pdb
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\obj\Debug\EvaluacionModel.csproj.AssemblyReference.cache
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\obj\Debug\EvaluacionModel.csproj.CoreCompileInputs.cache
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\obj\Debug\StarCapModel.dll
+C:\Users\matia\Source\Repos\Evaluacion-3\StarCapModel\obj\Debug\StarCapModel.pdb
