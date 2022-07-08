@@ -12,6 +12,7 @@ namespace EvaluacionModel
         private string serie;
         private string nombre;
 
+
         public string Serie { get => serie; set => serie = value; }
         public string Nombre { get => nombre; set => nombre = value; }
     }

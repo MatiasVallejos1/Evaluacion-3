@@ -8,31 +8,46 @@ namespace EvaluacionModel.DAL
 {
     public class MedidorDALObjetos : IMedidorDAL
     {
+        private static List<Medidor> medidores = new List<Medidor>();
+        public void AgregarMedidor(Medidor medidor)
+        {
+            medidores.Add(medidor);
+        }
+
+        public void CargarLista()
+        {
+            medidores.Add(new Medidor
+            {
+                Nombre = "Medidor 01",
+                Serie = "M01"
+            });
+            medidores.Add(new Medidor
+            {
+                Nombre = "Medidor 02",
+                Serie = "M02"
+            });
+            medidores.Add(new Medidor
+            {
+                Nombre = "Medidor 03",
+                Serie = "M03"
+            });
+        }
+
+        public void Eliminar(string serie)
+        {
+            Medidor eliminado = medidores.Find(c => c.Serie.Equals(serie));
+            medidores.Remove(eliminado);
+        }
+
+        public List<Medidor> Filtrar(Medidor smedidor)
+        {
+            return medidores.FindAll(c => c.Nombre.Equals(smedidor.Nombre));
+        }
+
         public List<Medidor> ObtenerMedidor()
         {
-            return new List<Medidor>()
-            {
-                new Medidor()
-                {
-                    Nombre = "Medidor 1",
-                    Serie = "M01"
-                },
-                new Medidor()
-                {
-                    Nombre = "Medidor 2",
-                    Serie = "M02"
-                },
-                new Medidor()
-                {
-                    Nombre = "Medidor 3",
-                    Serie = "M03"
-                },
-                new Medidor()
-                {
-                    Nombre = "Medidor 4",
-                    Serie = "M04"
-                }
-            };
+
+            return medidores;
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="" title="Inicio"  description="">
-    <siteMapNode url="Default.aspx" title="Agregar Clientes"  description="" />
-    <siteMapNode url="VerCliente.aspx" title="Ver Clientes"  description="" />
+    <siteMapNode url="Default.aspx" title="Ingresar Lectura"  description="" />
+    <siteMapNode url="MostrarLecturas.aspx" title="Mostrar Lecturas"  description="" />
+	<siteMapNode url="IngresarMedidor.aspx" title="Ingresar Medidor"  description="" />
+	<siteMapNode url="VerMedidor.aspx" title="Ver Medidores"  description="" />
   </siteMapNode>
 </siteMap>

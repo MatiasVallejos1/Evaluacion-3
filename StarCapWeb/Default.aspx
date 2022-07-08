@@ -11,16 +11,8 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="nombreTxt">Nombre</label>
-                        <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="rutTxt">Rut</label>
-                        <asp:TextBox ID="rutTxt" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="bebidaDdl">Medidor</label>
-                        <asp:DropDownList runat="server" ID="bebidaDdl" CssClass="form-select">
+                        <label for="medidorDdl">Medidor</label>
+                        <asp:DropDownList runat="server" ID="medidorDdl" CssClass="form-select">
 
                         </asp:DropDownList>
                     </div>
@@ -29,12 +21,19 @@
                         <asp:Calendar runat="server" ID="fechaDdl"></asp:Calendar>
                     </div>
                     <div class="form-group">
-                        <label for="nivelRbl">Nivel</label>
-                        <asp:RadioButtonList runat="server" ID="nivelRbl">
-                            <asp:ListItem Selected="True" Value="1" Text="Silver"></asp:ListItem>
-                            <asp:ListItem Value="2" Text="Gold"></asp:ListItem>
-                            <asp:ListItem Value="3" Text="Platinum"></asp:ListItem>
-                        </asp:RadioButtonList>
+                        <label for="nombreTxt">Hora de Lectura</label>
+                        <div class="row justify-content-start">
+                            <div class="col-4"><p class="text-center text-primary">Hora</p></div>
+                            <div class="col-4"><p class="text-center text-primary">Minutos</p></div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div class="col-4"><asp:TextBox type="number" min="1" max="24" ID="horaTxt" CssClass="form-control" runat="server"></asp:TextBox></div>
+                            <div class="col-4"><asp:TextBox type="number" min="0" max="59" ID="minutosTxt" CssClass="form-control" runat="server"></asp:TextBox></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivelRbl">Consumo</label>
+                        <asp:TextBox type="number" min="0" max="600" ID="consumoTxt" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Button runat="server" ID="agregarBtn" OnClick="agregarBtn_Click"

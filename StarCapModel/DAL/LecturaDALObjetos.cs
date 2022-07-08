@@ -14,15 +14,15 @@ namespace EvaluacionModel.DAL
             lecturas.Add(lectura);
         }
 
-        public void Eliminar(string nombre)
+        public void Eliminar(int id)
         {
-            Lectura eliminado = lecturas.Find(c => c.Nombre == nombre);
+            Lectura eliminado = lecturas.Find(c => c.Id.Equals(id));
             lecturas.Remove(eliminado);
         }
 
-        public List<Lectura> Filtrar(int medidor)
+        public List<Lectura> Filtrar(Medidor medidor)
         {
-            return lecturas.FindAll(c => c.Medidor == medidor);
+            return lecturas.FindAll(c => c.SMedidor.Nombre.Equals(medidor.Nombre));
         }
 
         public List<Lectura> Obtener()

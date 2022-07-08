@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace EvaluacionWeb
+namespace StarCapWeb
 {
 
 
-    public partial class Default
+    public partial class IngresarMedidor
     {
 
         /// <summary>
@@ -24,57 +24,30 @@ namespace EvaluacionWeb
         protected global::System.Web.UI.WebControls.Label mensajeslbl;
 
         /// <summary>
-        /// Control medidorDdl.
+        /// Control nombreTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList medidorDdl;
+        protected global::System.Web.UI.WebControls.TextBox nombreTxt;
 
         /// <summary>
-        /// Control fechaDdl.
+        /// Control serieTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar fechaDdl;
+        protected global::System.Web.UI.WebControls.TextBox serieTxt;
 
         /// <summary>
-        /// Control horaTxt.
+        /// Control agregarMBtn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox horaTxt;
-
-        /// <summary>
-        /// Control minutosTxt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox minutosTxt;
-
-        /// <summary>
-        /// Control consumoTxt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox consumoTxt;
-
-        /// <summary>
-        /// Control agregarBtn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button agregarBtn;
+        protected global::System.Web.UI.WebControls.Button agregarMBtn;
     }
 }

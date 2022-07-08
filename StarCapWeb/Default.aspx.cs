@@ -23,10 +23,10 @@ namespace EvaluacionWeb
             {
                 //aqui cargo la lista del dropdown
                 List<Medidor> medidor = medidoresDAL.ObtenerMedidor();
-                this.bebidaDdl.DataSource = medidor;
-                this.bebidaDdl.DataTextField = "Nombre";
-                this.bebidaDdl.DataValueField = "Serie";
-                this.bebidaDdl.DataBind();
+                this.medidorDdl.DataSource = medidor;
+                this.medidorDdl.DataTextField = "Nombre";
+                this.medidorDdl.DataValueField = "Serie";
+                this.medidorDdl.DataBind();
             }
 
         }
@@ -34,28 +34,36 @@ namespace EvaluacionWeb
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
             //1. obtener los datos del formulario
-            string nombre = this.nombreTxt.Text.Trim();
-            string rut = this.rutTxt.Text.Trim();
+            Random rand = new Random();
+            int num = rand.Next();
+            DateTime fecha = this.fechaDdl.SelectedDate;
+            int hora = int.Parse(this.horaTxt.Text.Trim());
+            int minutos = int.Parse(this.minutosTxt.Text.Trim());
+            int consumo = int.Parse(this.consumoTxt.Text.Trim());
             //esto obtine el valor del dropdown
-            string bebidaValor = this.bebidaDdl.SelectedValue;
+            string medidortxt = this.medidorDdl.SelectedValue;
             //esto obtiene el texto
-            string bebidaTexto = this.bebidaDdl.SelectedItem.Text;
-            int nivel = Convert.ToInt32(this.nivelRbl.SelectedItem.Value);
             //2. construir el objeto de tipo cliente
             List<Medidor> medidores = medidoresDAL.ObtenerMedidor();
-            Medidor medidor = medidores.Find(b => b.Serie == this.bebidaDdl.SelectedItem.Value);
+            Medidor medidor = medidores.Find(b => b.Nombre.Equals(this.medidorDdl.SelectedItem.Value));
 
             Lectura lectura = new Lectura()
             {
-                Nombre = nombre,
-                Medidor = nivel,
+                Id = num,
+                SMedidor = medidor,
+                Fecha = fecha,
+                Hora = hora,
+                Minutos = minutos,
+                Consumo = consumo
             };
 
             //3. Llammar al DAL
             lecturasDAL.Agregar(lectura);
             //4. Mostrar mensaje de exito
-            this.mensajeslbl.Text = "Cliente Ingresado";
-            Response.Redirect("VerCliente.aspx");
+            this.mensajeslbl.Text = "Lectura Ingresada";
+            Response.Redirect("MostrarLecturas.aspx");
+
+            
 
         }
     }

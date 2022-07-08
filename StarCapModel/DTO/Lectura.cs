@@ -8,31 +8,18 @@ namespace EvaluacionModel
 {
     public class Lectura
     {
-        private string nombre, consumo;
+        private int id;
         private DateTime fecha;
 
-        private int medidor;
-        private Medidor bebidaFavorita;
+        private int consumo, hora, minutos;
 
-        public string NivelTxt
-        {
-            get
-            {
-                string nivelTxt = "";
-                switch (medidor)
-                {
-                    case 1: nivelTxt = "M01";
-                        break;
-                    case 2: nivelTxt = "M02";
-                        break;
-                    case 3: nivelTxt = "M03";
-                        break;
-                }
-                return nivelTxt;
-            }
-        }
+        private Medidor sMedidor;
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public int Medidor { get => medidor; set => medidor = value; }
+        public int Id { get => id; set => id = value; }
+        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public int Consumo { get => consumo; set => consumo = value; }
+        public int Hora { get => hora; set => hora = value; }
+        public int Minutos { get => minutos; set => minutos = value; }
+        public Medidor SMedidor { get => sMedidor; set => sMedidor = value; }
     }
 }

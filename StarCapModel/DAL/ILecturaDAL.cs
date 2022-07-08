@@ -9,11 +9,11 @@ namespace EvaluacionModel.DAL
     public interface ILecturaDAL
     {
         List<Lectura> Obtener();
-        void Agregar(Lectura cliente);
+        void Agregar(Lectura lectura);
 
-        void Eliminar(string rut);
+        void Eliminar(int id);
 
-        List<Lectura> Filtrar(int nivel);
+        List<Lectura> Filtrar(Medidor smedidor);
 
     }
 }

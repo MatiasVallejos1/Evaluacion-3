@@ -11,7 +11,7 @@ namespace EvaluacionWeb
 {
 
 
-    public partial class AgregarClientes
+    public partial class IngresarLectura
     {
     }
 }
