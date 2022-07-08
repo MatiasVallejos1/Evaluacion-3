@@ -41,7 +41,7 @@ namespace StarCapWeb
         }
         protected void grillaMedidor_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "eliminar")
+            if (e.CommandName == "eliminarM")
             {
                 //signfica que el usuario apreto el boton eliminar
                 //por ende, tengo que eliminar el cliente
